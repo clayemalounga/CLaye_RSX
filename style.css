@@ -1,0 +1,36 @@
+#animation{
+    animation-name: bouge;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-delay: 1ms;
+}
+@keyframes bouge{
+    from{
+        opacity: 0;
+        transform: translateY(1000px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#animation1{
+    animation-name: bouges;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-delay: 1ms;
+}
+@keyframes bouges{
+    from{
+        opacity: 0;
+        transform: translateZ(-1000px);
+    }
+    to{
+        opacity: 1;
+        transform: translateZ(0px);
+    }
+}
+body{
+    background-color: rgba(0, 0, 0,0.1);
+}

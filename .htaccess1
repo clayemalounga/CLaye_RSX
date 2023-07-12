@@ -1,0 +1,18 @@
+# Activons d'abord le moteur de reecriture
+##RewriteEngine on
+
+#Redirection de tous les fichier inexistant dans le dossier image | style sur la page index.php
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^(image|style)/(.*)$ index.php [L]
+
+# # Redirection vers index.php pour les fichiers inexistants dans les dossiers "image" et "style"
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^(image|style)/(.*)$ index.php [L]
+
+# # Permettre l'accès aux fichiers des dossiers style et image tout en bloquant l'accès direct aux dossiers style et image ainsi que leurs sous dossiers.
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^(image|style)/(.*)$ - [L]
+
+#Redirection uniquement sur la page index.php
+#RewriteRule ^(.*)$ index.php [L]
+
